@@ -1,512 +1,104 @@
-/* Set some basic styles for the page */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #7a0961;
-    
-  }
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
 
-  h1 {
-    color: green;
-  }
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: #2ed06f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+h1{
+  text-align: center;
+  padding: 20px;
+  color: #3a86ff;
+
+}
+
+.search-container{
+  background: #fb5607;
+  padding: 10px;
+  width: 30%;
+  border-radius: 8px;
+  display: flex;
+  gap: 5px;
+}
+
+.search-container input{
+  border: none;
+  width: 80%;
+  padding: 5px;
+  outline: none;
+  border-radius: 4px;
+}
+
+.search-container #submit{
+  padding: 5px;
+  width: 15%;
+  cursor: pointer;
+}
+
+.card-wrapper{
+  padding: 20px;
+  background-color: #ffbe0b;
+  border-radius: 12px;
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 40px;
   
-  .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Style the search input */
-  .search-form {
-    margin-bottom: 20px;
-  }
-  
-  .search-form input[type="text"] {
-    padding: 8px 12px;
-    font-size: 16px;
-    border: none;
-    border-radius: 4px;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  .input__container {
-    position: relative;
-    background: rgba(154, 165, 33, 0.664);
-    padding: 10px 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    border-radius: 22px;
-    max-width: 300px;
-    transition: transform 400ms;
-    transform-style: preserve-3d;
-    transform: rotateX(15deg) rotateY(-20deg);
-    perspective: 500px;
-  }
-  
-  .shadow__input {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    bottom: 0;
-    z-index: -1;
-    filter: blur(30px);
-    border-radius: 20px;
-    background-color: #999cff;
-    background-image: radial-gradient(at 85% 51%, hsla(60,60%,61%,1) 0px, transparent 50%),
-      radial-gradient(at 74% 68%, hsla(235,69%,77%,1) 0px, transparent 50%),
-      radial-gradient(at 64% 79%, hsla(284,72%,73%,1) 0px, transparent 50%),
-      radial-gradient(at 75% 16%, hsla(283,60%,72%,1) 0px, transparent 50%),
-      radial-gradient(at 90% 65%, hsla(153,70%,64%,1) 0px, transparent 50%),
-      radial-gradient(at 91% 83%, hsla(283,74%,69%,1) 0px, transparent 50%),
-      radial-gradient(at 72% 91%, hsla(213,75%,75%,1) 0px, transparent 50%);
-  }
-  
-  .input__button__shadow {
-    cursor: pointer;
-    border: none;
-    background: none;
-    transition: transform 400ms, background 400ms;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 12px;
-    padding: 5px;
-  }
-  
-  .input__button__shadow:hover {
-    background: rgba(255, 255, 255, 0.411);
-  }
-  
-  .input__search {
-    width: 100%;
-    border-radius: 20px;
-    outline: none;
-    border: none;
-    padding: 8px;
-    position: relative;
-  }
-  
-  /* Style the data items */
-  .data-item {
-    background-color: #50e1e6;
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .data-item h2 {
-    font-size: 24px;
-    margin-top: 0;
-  }
-  
-  .data-item p {
-    font-size: 16px;
-    margin-bottom: 10px;
-  }
-  
-  /* Style the "like" button */
-  .like-button {
-    width: 10em;
-    position: relative;
-    height: 3.5em;
-    border: 3px ridge #149CEA;
-    outline: none;
-    background-color: transparent;
-    color: white;
-    transition: 1s;
-    border-radius: 0.3em;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 8px 12px;
-    cursor: pointer;
-  }
-
-  .like-button::after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    left: 3%;
-    width: 95%;
-    height: 40%;
-    background-color: #212121;
-    transition: 0.5s;
-    transform-origin: center;
-  }
-  
-  .like-button::before {
-    content: "";
-    transform-origin: center;
-    position: absolute;
-    top: 80%;
-    left: 3%;
-    width: 95%;
-    height: 40%;
-    background-color: #212121;
-    transition: 0.5s;
-  }
-  
-
-  .like-button:hover::before, .like-button:hover::after {
-    transform: scale(0)
-  }
-  
-  
-  .like-button:hover {
-    background-color: #ccc;
-    box-shadow: inset 0px 0px 25px #1479EA;
-  }
-  
-  /* Style the "liked" class */
-  .liked {
-    background-color: #ffe6e6;
-    border-color: #ff9999;
-  }
-  
-  /* Hide the items that don't match the search term */
-  .hidden {
-    display: none;
-  }
-
-  .socket {
-  width: 200px;
-  height: 200px;
-  position: absolute;
-  left: 50%;
-  margin-left: -100px;
-  top: 50%;
-  margin-top: -100px;
 }
 
-.hex-brick {
-  background: #000000;
-  width: 30px;
-  height: 17px;
-  position: absolute;
-  top: 5px;
-  animation-name: fade00;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  -webkit-animation-name: fade00;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
+.card-container{
+  padding: 10px;
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  background: #fff;
+  width: 400px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
 }
 
-.h2 {
-  transform: rotate(60deg);
-  -webkit-transform: rotate(60deg);
+.card-container #animeName{
+  font-weight: 800;
+  color: red;
+  font-size: 20px;
 }
 
-.h3 {
-  transform: rotate(-60deg);
-  -webkit-transform: rotate(-60deg);
+#animeQuote{
+  font-weight: 400;
+  line-height: 24px;
+  color: maroon;
 }
 
-.gel {
-  height: 100px;
-  width: 100px;
-  transition: all .3s;
-  -webkit-transition: all .3s;
-  position: absolute;
-  top: 100%;
-  left: 50%;
+#animeCharacter{
+  font-style: italic;
+  font-weight: 300;
+  color: gray;
 }
 
-.center-gel {
-  margin-left: -15px;
-  margin-top: -15px;
-  animation-name: pulse00;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  -webkit-animation-name: pulse00;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
+#like-btn{
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background: purple;
+  color: white;
+  border: none;
+  border-radius: 6px;
 }
 
-.c1 {
-  margin-left: -47px;
-  margin-top: -15px;
+#like-count {
+  color: red;
 }
-
-.c2 {
-  margin-left: -31px;
-  margin-top: -43px;
-}
-
-.c3 {
-  margin-left: 1px;
-  margin-top: -43px;
-}
-
-.c4 {
-  margin-left: 17px;
-  margin-top: -15px;
-}
-
-.c5 {
-  margin-left: -31px;
-  margin-top: 13px;
-}
-
-.c6 {
-  margin-left: 1px;
-  margin-top: 13px;
-}
-
-.c7 {
-  margin-left: -63px;
-  margin-top: -43px;
-}
-
-.c8 {
-  margin-left: 33px;
-  margin-top: -43px;
-}
-
-.c9 {
-  margin-left: -15px;
-  margin-top: 41px;
-}
-
-.c10 {
-  margin-left: -63px;
-  margin-top: 13px;
-}
-
-.c11 {
-  margin-left: 33px;
-  margin-top: 13px;
-}
-
-.c12 {
-  margin-left: -15px;
-  margin-top: -71px;
-}
-
-.c13 {
-  margin-left: -47px;
-  margin-top: -71px;
-}
-
-.c14 {
-  margin-left: 17px;
-  margin-top: -71px;
-}
-
-.c15 {
-  margin-left: -47px;
-  margin-top: 41px;
-}
-
-.c16 {
-  margin-left: 17px;
-  margin-top: 41px;
-}
-
-.c17 {
-  margin-left: -79px;
-  margin-top: -15px;
-}
-
-.c18 {
-  margin-left: 49px;
-  margin-top: -15px;
-}
-
-.c19 {
-  margin-left: -63px;
-  margin-top: -99px;
-}
-
-.c20 {
-  margin-left: 33px;
-  margin-top: -99px;
-}
-
-.c21 {
-  margin-left: 1px;
-  margin-top: -99px;
-}
-
-.c22 {
-  margin-left: -31px;
-  margin-top: -99px;
-}
-
-.c23 {
-  margin-left: -63px;
-  margin-top: 69px;
-}
-
-.c24 {
-  margin-left: 33px;
-  margin-top: 69px;
-}
-
-.c25 {
-  margin-left: 1px;
-  margin-top: 69px;
-}
-
-.c26 {
-  margin-left: -31px;
-  margin-top: 69px;
-}
-
-.c27 {
-  margin-left: -79px;
-  margin-top: -15px;
-}
-
-.c28 {
-  margin-left: -95px;
-  margin-top: -43px;
-}
-
-.c29 {
-  margin-left: -95px;
-  margin-top: 13px;
-}
-
-.c30 {
-  margin-left: 49px;
-  margin-top: 41px;
-}
-
-.c31 {
-  margin-left: -79px;
-  margin-top: -71px;
-}
-
-.c32 {
-  margin-left: -111px;
-  margin-top: -15px;
-}
-
-.c33 {
-  margin-left: 65px;
-  margin-top: -43px;
-}
-
-.c34 {
-  margin-left: 65px;
-  margin-top: 13px;
-}
-
-.c35 {
-  margin-left: -79px;
-  margin-top: 41px;
-}
-
-.c36 {
-  margin-left: 49px;
-  margin-top: -71px;
-}
-
-.c37 {
-  margin-left: 81px;
-  margin-top: -15px;
-}
-
-.r1 {
-  animation-name: pulse00;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-delay: .2s;
-  -webkit-animation-name: pulse00;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-delay: .2s;
-}
-
-.r2 {
-  animation-name: pulse00;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-delay: .4s;
-  -webkit-animation-name: pulse00;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-delay: .4s;
-}
-
-.r3 {
-  animation-name: pulse00;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-delay: .6s;
-  -webkit-animation-name: pulse00;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-delay: .6s;
-}
-
-.r1 > .hex-brick {
-  animation-name: fade00;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-delay: .2s;
-  -webkit-animation-name: fade00;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-delay: .2s;
-}
-
-.r2 > .hex-brick {
-  animation-name: fade00;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-delay: .4s;
-  -webkit-animation-name: fade00;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-delay: .4s;
-}
-
-.r3 > .hex-brick {
-  animation-name: fade00;
-  animation-duration: 2s;
-  animation-iteration-count: infinite;
-  animation-delay: .6s;
-  -webkit-animation-name: fade00;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-delay: .6s;
-}
-
-@keyframes pulse00 {
-  0% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-
-  50% {
-    -webkit-transform: scale(0.01);
-    transform: scale(0.01);
-  }
-
-  100% {
-    -webkit-transform: scale(1);
-    transform: scale(1);
-  }
-}
-
-@keyframes fade00 {
-  0% {
-    background: #252525;
-  }
-
-  50% {
-    background: #000000;
-  }
-
-  100% {
-    background: #353535;
-  }
-}
-
-  
