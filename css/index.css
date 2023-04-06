@@ -108,7 +108,7 @@ h1{
 @media only screen and (max-width: 600px) {
   body {
     background-color: lightblue;
-    width: 1000%;
+    width: 100%;
   }
   .card-wrapper{
     width: 800px;
