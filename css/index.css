@@ -114,4 +114,16 @@ h1{
     margin: 10px;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
+  .search-container #submit{
+    padding: 10px;
+    width: 30%;
+  }
+  .search-container{
+    background: #fb5607;
+    padding: 15px;
+    width: 50%;
+    border-radius: 8px;
+    display: flex;
+    gap: 10px;
+  }
 }
