@@ -110,17 +110,6 @@ h1{
     background-color: lightblue;
   }
   .card-wrapper{
-    padding: 20px;
-    background-color: #ffbe0b;
-    border-radius: 12px;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; */
-    display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    margin-bottom: 40px;
-    margin: center;
-  
-    
   }
 }
