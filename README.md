@@ -32,7 +32,8 @@ JavaScript
 You can view the live site:
     https://mohasalanka.github.io/How-to-worko-on-API-project/
 
-![QRCode for live link](./qrcode_github.com.png)
+![QRCode for live link](./qrcode.jpg)
+
 ## Authors
 Mohamed.A.Salad
 ## License
