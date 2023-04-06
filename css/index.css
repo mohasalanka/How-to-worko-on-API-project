@@ -105,27 +105,27 @@ h1{
 #like-count {
   color: red;
 }
+/* Media query for small screens */
 @media only screen and (max-width: 600px) {
   body {
     background-color: lightblue;
     width: 100%;
   }
-  .card-wrapper{
-    width: 300px;
-    margin-right: 10px;
+  
+  .card-wrapper {
+    width: 100%;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-   
   }
-  .search-container #submit{
+  
+  .search-container #submit {
     padding: 3px;
-    width: 10%;
+    width: 20%;
   }
-  .search-container{
-    background: #fb5607;
-    padding: 15px;
-    width: 50%;
-    border-radius: 8px;
-    display: flex;
-    gap: 10px;
+  
+  .search-container {
+    width: 80%;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
