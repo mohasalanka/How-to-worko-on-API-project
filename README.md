@@ -1,5 +1,6 @@
 # Anime Quotes
 This is a simple web application that fetches anime quotes from the AnimeChan API and displays them on the page. Users can also search for quotes by anime title or character name, and like their favorite quotes.
+![anime example](./naruto.jpg)
 
 ## Getting Started
 To get started with this project, you can clone this repository to your local machine:
