@@ -32,7 +32,7 @@ JavaScript
 You can view the live site:
     https://mohasalanka.github.io/How-to-worko-on-API-project/
 
-    
+
 ## Authors
 Mohamed.A.Salad
 ## License

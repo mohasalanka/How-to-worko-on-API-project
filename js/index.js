@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.querySelector('#search-container');
   searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  const searchValue = document.getElementById('clearsearch').value
+  const searchValue = document.getElementById('search').value
   filterQuotes(searchValue);
   });
   
