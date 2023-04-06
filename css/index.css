@@ -114,7 +114,7 @@ h1{
     width: 800px;
     margin: 20px;
     grid-template-columns: repeat(1, minmax(0, 1fr));
-    align-content: center;
+    align-content: right;
   }
   .search-container #submit{
     padding: 3px;
