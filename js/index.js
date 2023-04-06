@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const searchForm = document.querySelector('#search-container');
   searchForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  let searchValue = document.querySelector('#search').value
+  const searchValue = document.getElementById('search').value
   filterQuotes(searchValue);
   });
   
@@ -81,12 +81,12 @@ function filterQuotes(searchValue) {
     
     if (animeNameText.includes(searchInput)) {
       quote.style.display = 'block';
-      quote.style = 'position: relative; margin-left: 5%;'
-      let home = document.getElementById('card-wrapper')
-      home.style = 'width: 30%'
+      quote.style.cssText = 'position: relative; margin-left: 5%;';
+      cardWrapper.style.width = '30%';
     } else {
       quote.style.display = 'none';
     }
+    
   });
 }
 
