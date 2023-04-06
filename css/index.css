@@ -112,7 +112,7 @@ h1{
   }
   .card-wrapper{
     width: 300px;
-    margin: 10px;
+    margin-right: 10px;
     grid-template-columns: repeat(1, minmax(0, 1fr));
    
   }
