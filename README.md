@@ -38,7 +38,7 @@ Mohamed.A.Salad
 ## License
 This project is licensed under the MIT License - see the LICENSE.md file for details.
 
-![qrcode_github com (1)](https://user-images.githubusercontent.com/126656377/230311201-ec04d901-e230-44b6-a154-7f7cd40e7aef.png)
+
 
 
 
