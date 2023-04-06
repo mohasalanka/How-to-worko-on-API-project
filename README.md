@@ -32,7 +32,7 @@ JavaScript
 You can view the live site:
     https://mohasalanka.github.io/How-to-worko-on-API-project/
 
-![Alt text](vscode-local:/c%3A/Users/mikby/Downloads/qrcode_github.com%20%281%29.png)
+![QRCode for live link](./qrcode_github.com.png)
 ## Authors
 Mohamed.A.Salad
 ## License
