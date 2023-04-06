@@ -110,6 +110,8 @@ h1{
     background-color: lightblue;
   }
   .card-wrapper{
+    width: 300px;
+    margin: 10px;
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
